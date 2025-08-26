@@ -124,7 +124,8 @@
         "images": [
             "/images/campuspay1.png",
             "/images/campuspay2.png",
-            "/images/campuspay3.png"
+            "/images/campuspay3.png",
+            "/images/campuspay4.png"
         ],
         "thumbnail": "thumbnail/campuspay",
         "githubUrls": [
