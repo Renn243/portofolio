@@ -285,12 +285,16 @@ const Home = () => {
                                                     {project.description}
                                                 </p>
 
-                                                <button className="group/btn flex items-center gap-4 text-white hover:text-white/80 transition-all duration-300">
-                                                    <h2 className="text-sm tracking-[0.3em] font-light">
-                                                        VIEW PROJECT
-                                                    </h2>
-                                                    <div className="w-12 h-px bg-white group-hover/btn:w-20 transition-all duration-300"></div>
-                                                </button>
+                                                <Link
+                                                    to={`/projects/${project.id}`}
+                                                >
+                                                    <button className="group/btn flex items-center gap-4 text-white hover:text-white/80 transition-all duration-300">
+                                                        <h2 className="text-sm tracking-[0.3em] font-light">
+                                                            VIEW PROJECT
+                                                        </h2>
+                                                        <div className="w-12 h-px bg-white group-hover/btn:w-20 transition-all duration-300"></div>
+                                                    </button>
+                                                </Link>
                                             </div>
 
                                             <div className="relative">
