@@ -153,8 +153,11 @@ const Home = () => {
                                 </button>
                             </Link>
 
-                            <button className="text-white hover:text-blue-400 transition-all duration-300 text-sm tracking-[0.3em] font-light px-12 py-4">
-                                DOWNLOAD CV
+                            <button className="group relative px-16 py-4 border border-white text-white hover:text-black transition-all duration-500 overflow-hidden">
+                                <span className="relative z-10 text-sm tracking-[0.3em] font-light">
+                                    DOWNLOAD CV
+                                </span>
+                                <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                             </button>
                         </div>
                     </div>
