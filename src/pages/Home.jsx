@@ -346,7 +346,7 @@ const Home = () => {
                         <div className="grid md:grid-cols-3 gap-12 mb-16">
                             {[
                                 { icon: faEnvelopeSolid, label: "EMAIL", value: "muhraihanresa243@gmail.com", href: "mailto:muhraihanresa243@gmail.com" },
-                                { icon: faLinkedin, label: "LINKEDIN", value: "Muh Raihan Resa", href: "https://www.linkedin.com/in/muhraihanresa243/" },
+                                { icon: faLinkedin, label: "LINKEDIN", value: "Muhammad Raihan Resa", href: "https://www.linkedin.com/in/muhraihanresa243/" },
                                 { icon: faGithub, label: "GITHUB", value: "Renn243", href: "https://github.com/Renn243" }
                             ].map((contact) => (
                                 <div key={contact.label} className="group text-center">
