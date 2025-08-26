@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "title": "Gapakerem Website",
+        "description": "Platform website untuk memesan trip gunung, menyediakan opsi open trip dan private trip, serta dashboard admin untuk manajemen trip dan pengguna.",
+        "longDescription": "Gapakerem Website adalah platform full-stack yang memungkinkan pengguna untuk memesan trip gunung, baik open trip maupun private trip, dengan mudah dan aman. Website ini terdiri dari dua bagian: web user untuk pemesanan dan tracking trip, serta dashboard admin untuk mengelola trip, peserta, pembayaran, dan laporan analytics.",
+        "technologies": [
+            "React",
+            "Node.js",
+            "MySQL",
+            "Express"
+        ],
+        "category": "Web Development",
+        "role": "Frontend Developer",
+        "features": [
+            "User registration & login",
+            "Booking open trip & private trip",
+            "Trip history & ticket management",
+            "Admin dashboard untuk manajemen trip dan peserta",
+            "Review & rating system untuk trip"
+        ],
+        "images": [
+            "/assets/gapakerem1.jpg",
+            "/assets/gapakerem2.jpg",
+            "/assets/gapakerem3.jpg"
+        ],
+        "githubUrls": [
+            {
+                "label": "Frontend (User)",
+                "url": "https://github.com/Renn243/gapakerem-web"
+            },
+            {
+                "label": "Frontend (Admin)",
+                "url": "https://github.com/Renn243/gapakerem-admin"
+            },
+            {
+                "label": "Backend",
+                "url": "https://github.com/exoream/gapakerem"
+            }
+        ],
+        "liveUrl": "https://www.gapakeremadventure.my.id",
+        "figma": "https://www.figma.com/design/LRjAtvEVa00UQdz0v79oVr/Gapakerem-Adventure"
+    },
+    {
+        "id": 2,
+        "title": "Trototrack",
+        "description": "Aplikasi mobile untuk melaporkan trotoar rusak di kota, dilengkapi dengan fitur scan kerusakan menggunakan CNN Xception dan integrasi Google Maps.",
+        "longDescription": "Trototrack adalah aplikasi mobile yang dikembangkan menggunakan Kotlin untuk memungkinkan warga melaporkan trotoar rusak dengan mudah. Aplikasi ini memiliki fitur scan berbasis CNN (Xception) untuk mendeteksi tingkat kerusakan, integrasi Google Maps untuk memilih lokasi pelaporan, serta website admin untuk menindaklanjuti laporan dan manajemen aplikasi. Selain itu, aplikasi juga menyediakan fitur artikel edukatif terkait infrastruktur dan keselamatan jalan.",
+        "technologies": [
+            "Kotlin",
+            "Python",
+            "Google Maps API",
+            "Node.js",
+            "Express",
+            "MySQL",
+            "React (Admin Web)",
+            "CNN Xception (ML Model)"
+        ],
+        "category": "Mobile & Web Development",
+        "role": "Mobile Developer, Frontend Developer, & Machine Learning Developer",
+        "features": [
+            "Scan trotoar rusak menggunakan CNN Xception",
+            "Pilih lokasi pelaporan melalui Google Maps",
+            "Submit laporan kerusakan dengan foto dan deskripsi",
+            "Dashboard admin untuk manajemen laporan",
+            "Fitur artikel terkait infrastruktur dan keselamatan jalan"
+        ],
+        "images": [
+            "/assets/trototrack1.jpg",
+            "/assets/trototrack2.jpg",
+            "/assets/trototrack3.jpg"
+        ],
+        "githubUrls": [
+            {
+                "label": "Frontend",
+                "url": "https://github.com/Skripsi-MuhRaihanResa/skripsi-fe"
+            },
+            {
+                "label": "Mobile",
+                "url": "https://github.com/Skripsi-MuhRaihanResa/skripsi-mobile"
+            },
+            {
+                "label": "Machine Learning",
+                "url": "https://github.com/Skripsi-MuhRaihanResa/skripsi-ml"
+            },
+            {
+                "label": "Backend",
+                "url": "https://github.com/Renn243/trototrack-be"
+            }
+        ],
+        "liveUrl": null,
+        "figma": "https://www.figma.com/design/8BBWdD7K7LDHEfBGBdX6dS/Untitled?node-id=0-1&p=f&t=9hjECNjHpGLaCOgo-0"
+    },
+    {
+        "id": 3,
+        "title": "Campus Pay",
+        "description": "Aplikasi untuk mempermudah pembayaran kampus seperti UKT, KKN, proposal, ujian tutup, dan lain-lain, menggunakan Midtrans sebagai payment gateway.",
+        "longDescription": "Campus Pay adalah platform pembayaran kampus yang dikembangkan menggunakan Laravel, menyediakan fitur pembayaran online untuk berbagai keperluan akademik seperti UKT, KKN, proposal, ujian tutup, dan lain-lain. Website terdiri dari dua sisi, user untuk melakukan pembayaran dan melihat riwayat transaksi, serta admin untuk memverifikasi pembayaran, mengelola transaksi, dan memonitor laporan keuangan.",
+        "technologies": [
+            "Laravel",
+            "PHP",
+            "MySQL",
+            "Midtrans API",
+            "Bootstrap"
+        ],
+        "category": "Web Development",
+        "role": "Full Stack Developer",
+        "features": [
+            "User registration & login",
+            "Pembayaran UKT, KKN, proposal, ujian tutup, dan lain-lain",
+            "Integrasi Midtrans payment gateway",
+            "Verifikasi pembayaran & approval oleh admin",
+            "Dashboard admin untuk monitoring transaksi",
+            "Email notification pembayaran",
+            "Mobile responsive design"
+        ],
+        "images": [
+            "/assets/campuspay1.jpg",
+            "/assets/campuspay2.jpg",
+            "/assets/campuspay3.jpg"
+        ],
+        "githubUrls": [
+            {
+                "label": "Website",
+                "url": "https://github.com/Renn243/CampusPay"
+            }
+        ],
+        "liveUrl": null,
+        "figma": null
+    },
+    {
+        "id": 4,
+        "title": "Aninyan",
+        "description": "Website untuk menonton anime secara online dengan fitur pencarian, filter genre, dan daftar anime populer.",
+        "longDescription": "Aninyan adalah platform streaming anime berbasis web yang dikembangkan menggunakan React.js. Website ini menyediakan berbagai fitur seperti pencarian anime, filter berdasarkan genre atau status anime (ongoing/finished), tampilan daftar anime populer, detail anime lengkap, dan streaming episode. Admin dapat mengelola konten dan update data anime melalui backend terpisah.",
+        "technologies": [
+            "React.js",
+            "Tailwind CSS",
+            "Node.js"
+        ],
+        "category": "Web Development",
+        "role": "Front End Developer",
+        "features": [
+            "Pencarian anime dengan filter genre dan status",
+            "Daftar anime populer dan ongoing",
+            "Detail anime lengkap dengan episode",
+            "Streaming episode anime",
+            "Responsive design untuk desktop dan mobile"
+        ],
+        "images": [
+            "/assets/aninyan1.jpg",
+            "/assets/aninyan2.jpg",
+            "/assets/aninyan3.jpg"
+        ],
+        "githubUrls": [
+            {
+                "label": "Website",
+                "url": "https://github.com/NyanNyanAnime/NyanNyan-WEB"
+            }
+        ],
+        "liveUrl": "https://www.aninyan.com/",
+        "figma": null
+    }
+]
