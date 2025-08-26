@@ -5,46 +5,13 @@ import { faEnvelope as faEnvelopeSolid } from "@fortawesome/free-solid-svg-icons
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { I1, I2, I3, I4, I5, I6, I7, I8, I9 } from '../assets/icons'
 import Char from '../assets/character.jpg'
-
+import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
 
 const Home = () => {
     const horizontalRef = useRef(null);
     const projectsRef = useRef(null);
     const [scrollY, setScrollY] = useState(0);
-
-    const projects = [
-        {
-            id: '01',
-            title: 'E-COMMERCE PLATFORM',
-            subtitle: 'Full-Stack Development',
-            description: 'A modern e-commerce solution built with React and Node.js, featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.',
-            tech: ['React.js', 'Node.js', 'MongoDB', 'Stripe API', 'Socket.io'],
-            year: '2024',
-            status: 'LIVE',
-            image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMEYxNDE5Ii8+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzM0ODNGNiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMzNDgzRjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkUtQ09NTUVSQ0U8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2Mzc0OEUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlBMQVRGT1JNPC90ZXh0Pgo8L3N2Zz4='
-        },
-        {
-            id: '02',
-            title: 'TASK MANAGEMENT SYSTEM',
-            subtitle: 'Collaborative Application',
-            description: 'Team collaboration platform with real-time updates, project tracking, and advanced reporting features. Built for modern remote teams.',
-            tech: ['Next.js', 'PostgreSQL', 'Socket.io', 'Redis', 'Tailwind CSS'],
-            year: '2024',
-            status: 'DEVELOPMENT',
-            image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMEYxNDE5Ii8+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyRDNFRSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMyMkQzRUUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlRBU0sgTUdNVDwvdGV4dD4KPHRleHQgeD0iMjAwIiB5PSIxODAiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzYzNzQ4RSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U1lTVEVNPC90ZXh0Pgo8L3N2Zz4='
-        },
-        {
-            id: '03',
-            title: 'WEATHER ANALYTICS',
-            subtitle: 'Data Visualization',
-            description: 'Advanced weather tracking application with predictive analytics, beautiful data visualization, and location-based forecasting.',
-            tech: ['React.js', 'D3.js', 'Weather API', 'Chart.js', 'PWA'],
-            year: '2023',
-            status: 'LIVE',
-            image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMEYxNDE5Ii8+CjxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzEwQjk4MSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTUwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMxMEI5ODEiIHRleHQtYW5jaG9yPSJtaWRkbGUiPldFQVRIRVI8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2Mzc0OEUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFOQUxZVElDUzwvdGV4dD4KPC9zdmc+'
-        }
-    ];
 
     const backgroundColors = [
         '#5ba4d7',
@@ -58,7 +25,6 @@ const Home = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [bgColor, setBgColor] = useState(backgroundColors[0]);
 
-    // Horizontal scroll effect with background color transition
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -71,18 +37,18 @@ const Home = () => {
             const rect = projectsSection.getBoundingClientRect();
             const containerHeight = window.innerHeight;
 
-            // Check if projects section is in viewport
+            // Cek apakah section projects ada di viewport
             if (rect.top <= 0 && rect.bottom >= containerHeight) {
-                // Calculate progress through the section
+                // Hitung progress scroll di section
                 const progress = Math.abs(rect.top) / (rect.height - containerHeight);
                 const maxScroll = container.scrollWidth - container.clientWidth;
 
-                // Apply horizontal scroll based on vertical scroll progress
+                // Scroll horizontal berdasarkan progress
                 const targetScrollLeft = progress * maxScroll;
                 container.scrollLeft = targetScrollLeft;
 
-                // Calculate current slide based on scroll progress
-                const totalSlides = projects.length + 2; // +2 for header and see more slides
+                // Hitung slide saat ini
+                const totalSlides = 1 + 3 + 1; // 1 header + 3 projects + 1 "See More" slide
                 const slideProgress = progress * (totalSlides - 1);
                 const newSlide = Math.floor(slideProgress);
 
@@ -94,10 +60,10 @@ const Home = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial call
+        handleScroll(); // panggil awal
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [currentSlide, projects.length]);
+    }, [currentSlide]);
 
     return (
         <div className="">
@@ -265,7 +231,7 @@ const Home = () => {
                 ref={projectsRef}
                 className="relative transition-all duration-500 ease-in-out"
                 style={{
-                    height: `${(projects.length + 2) * 100}vh`,
+                    height: `${(5) * 100}vh`,
                     backgroundColor: bgColor
                 }}
             >
@@ -274,7 +240,7 @@ const Home = () => {
                         <div
                             ref={horizontalRef}
                             className="flex overflow-x-hidden"
-                            style={{ width: `${(projects.length + 2) * 100}vw` }}
+                            style={{ width: `${(5) * 100}vw` }}
                         >
                             {/* Header Project */}
                             <div className="min-w-screen flex-shrink-0 flex items-center justify-center px-6">
@@ -293,7 +259,7 @@ const Home = () => {
                             </div>
 
                             {/* Projects */}
-                            {projects.map((project, index) => (
+                            {projectsData.slice(0, 3).map((project, index) => (
                                 <div
                                     key={project.id}
                                     className="min-w-screen flex-shrink-0 flex items-center px-12"
@@ -316,17 +282,6 @@ const Home = () => {
                                                     {project.description}
                                                 </p>
 
-                                                {/* <div className="flex flex-wrap gap-3 mb-10">
-                                                    {project.tech.map((tech) => (
-                                                        <span
-                                                            key={tech}
-                                                            className="text-xs border border-white/30 text-white/60 px-4 py-2 tracking-[0.1em] hover:border-white hover:text-white transition-colors duration-300"
-                                                        >
-                                                            {tech}
-                                                        </span>
-                                                    ))}
-                                                </div> */}
-
                                                 <button className="group/btn flex items-center gap-4 text-white hover:text-white/80 transition-all duration-300">
                                                     <h2 className="text-sm tracking-[0.3em] font-light">
                                                         VIEW PROJECT
@@ -338,7 +293,7 @@ const Home = () => {
                                             <div className="relative">
                                                 <div className="aspect-[4/3] border border-white/20 relative overflow-hidden hover:border-white/40 transition-colors duration-500">
                                                     <img
-                                                        src={project.image}
+                                                        src={project.images[0]}
                                                         alt={project.title}
                                                         className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                                                     />
