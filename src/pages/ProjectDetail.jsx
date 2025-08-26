@@ -51,6 +51,19 @@ const ProjectDetail = () => {
                             </p>
                         </div>
                     </div>
+                    {project.liveUrl && (
+                        <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex justify-center"
+                        >
+                            <button className="group relative px-16 py-5 border border-blue-400 text-blue-400 hover:text-black transition-all duration-500 overflow-hidden">
+                                <span className="relative z-10 text-sm tracking-[0.3em] font-light">DEMO</span>
+                                <div className="absolute inset-0 bg-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                            </button>
+                        </a>
+                    )}
                 </div>
 
                 {/* Project Gallery */}

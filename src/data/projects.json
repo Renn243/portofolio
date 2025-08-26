@@ -20,10 +20,11 @@
             "Review & rating system untuk trip"
         ],
         "images": [
-            "/assets/gapakerem1.jpg",
-            "/assets/gapakerem2.jpg",
-            "/assets/gapakerem3.jpg"
+            "/images/gapakerem1.png",
+            "/images/gapakerem2.png",
+            "/images/gapakerem3.png"
         ],
+        "thumbnail": "thumbnail/gapakerem.png",
         "githubUrls": [
             {
                 "label": "Frontend (User)",
@@ -66,10 +67,16 @@
             "Fitur artikel terkait infrastruktur dan keselamatan jalan"
         ],
         "images": [
-            "/assets/trototrack1.jpg",
-            "/assets/trototrack2.jpg",
-            "/assets/trototrack3.jpg"
+            "/images/trototrack1.png",
+            "/images/trototrack2.png",
+            "/images/trototrack3.png",
+            "/images/trototrack4.png",
+            "/images/trototrack5.png",
+            "/images/trototrack6.png",
+            "/images/trototrack7.png",
+            "/images/trototrack8.png"
         ],
+        "thumbnail": "thumbnail/trototrack",
         "githubUrls": [
             {
                 "label": "Frontend",
@@ -115,10 +122,11 @@
             "Mobile responsive design"
         ],
         "images": [
-            "/assets/campuspay1.jpg",
-            "/assets/campuspay2.jpg",
-            "/assets/campuspay3.jpg"
+            "/images/campuspay1.png",
+            "/images/campuspay2.png",
+            "/images/campuspay3.png"
         ],
+        "thumbnail": "thumbnail/campuspay",
         "githubUrls": [
             {
                 "label": "Website",
@@ -148,10 +156,12 @@
             "Responsive design untuk desktop dan mobile"
         ],
         "images": [
-            "/assets/aninyan1.jpg",
-            "/assets/aninyan2.jpg",
-            "/assets/aninyan3.jpg"
+            "/images/aninyan1.png",
+            "/images/aninyan2.png",
+            "/images/aninyan3.png",
+            "/images/aninyan4.png"
         ],
+        "thumbnail": "thumbnail/aninyan",
         "githubUrls": [
             {
                 "label": "Website",

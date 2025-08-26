@@ -26,9 +26,9 @@ const Projects = () => {
                             className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform"
                         >
                             <div className="md:flex">
-                                <div className="md:w-80 relative overflow-hidden">
+                                <div className="h-100 w-80 relative overflow-hidden">
                                     <img
-                                        src={project.image}
+                                        src={project.images[0]}
                                         alt={project.title}
                                         className="w-full h-64 md:h-full object-cover transition-transform duration-500 hover:scale-110"
                                     />
