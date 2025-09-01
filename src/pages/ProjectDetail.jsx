@@ -36,17 +36,15 @@ const ProjectDetail = () => {
 
     return (
         <div className="min-h-screen py-12 px-4 bg-blue-50 overflow-hidden">
-
             <div className="max-w-7xl mx-auto px-4 py-12">
-                {/* Project Title Section */}
                 <div className="mb-12">
                     <div className="flex flex-wrap items-center justify-between mb-6">
                         <div className="flex-1 min-w-0 mr-6">
-                            <h1 className="text-blue-500 text-4xl md:text-5xl font-bold mb-4 leading-tight text-center">
+                            <h1 className="text-blue-500 text-4xl lg:text-5xl font-bold mb-4 leading-tight text-center">
                                 {project.title}
                             </h1>
                             <div className="mt-10 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-12"></div>
-                            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+                            <p className="lg:text-xl text-gray-600 leading-relaxed mb-6">
                                 {project.description}
                             </p>
                         </div>
@@ -58,7 +56,7 @@ const ProjectDetail = () => {
                             rel="noopener noreferrer"
                             className="flex justify-center"
                         >
-                            <button className="group relative px-16 py-5 border border-blue-400 text-blue-400 hover:text-black transition-all duration-500 overflow-hidden">
+                            <button className="group relative px-16 py-4 border border-blue-400 text-blue-400 hover:text-black transition-all duration-500 overflow-hidden">
                                 <span className="relative z-10 text-sm tracking-[0.3em] font-light">DEMO</span>
                                 <div className="absolute inset-0 bg-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                             </button>
@@ -66,7 +64,6 @@ const ProjectDetail = () => {
                     )}
                 </div>
 
-                {/* Project Gallery */}
                 <div className="mb-12">
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                         <div className="relative">
@@ -102,7 +99,6 @@ const ProjectDetail = () => {
 
                 <div className="grid lg:grid-cols-3 gap-8 mb-12">
                     <div className="lg:col-span-2 space-y-8">
-                        {/* Project Overview */}
                         <div className="bg-white rounded-2xl shadow-lg p-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                                 <i className="fas fa-bullseye text-indigo-600 text-xl mr-3"></i>
@@ -113,7 +109,6 @@ const ProjectDetail = () => {
                             </p>
                         </div>
 
-                        {/* Features */}
                         <div className="bg-white rounded-2xl shadow-lg p-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                                 <i className="fas fa-check-circle text-green-600 text-xl mr-3"></i>
@@ -131,7 +126,6 @@ const ProjectDetail = () => {
                     </div>
 
                     <div className="space-y-6">
-                        {/* Project Info */}
                         <div className="bg-white rounded-2xl shadow-lg p-6">
                             <h3 className="text-xl font-bold text-gray-900 mb-6">Role</h3>
                             <div className="space-y-4">
@@ -141,7 +135,6 @@ const ProjectDetail = () => {
                             </div>
                         </div>
 
-                        {/* Technologies */}
                         <div className="bg-white rounded-2xl shadow-lg p-6">
                             <h3 className="text-xl font-bold text-gray-900 mb-6">Technologies</h3>
                             <div className="flex flex-wrap gap-3">
@@ -156,7 +149,6 @@ const ProjectDetail = () => {
                             </div>
                         </div>
 
-                        {/* Source Code / GitHub */}
                         {project.githubUrls && project.githubUrls.length > 0 && (
                             <div className="bg-white rounded-2xl shadow-lg p-6">
                                 <h3 className="text-xl font-bold text-gray-900 mb-6">Source Code</h3>
@@ -169,7 +161,6 @@ const ProjectDetail = () => {
                                             rel="noopener noreferrer"
                                             className="flex items-center gap-3 px-4 py-2 border-2 border-blue-500 text-blue-500 font-medium rounded-lg transition-colors duration-200 hover:bg-blue-500 hover:text-white"
                                         >
-                                            {/* GitHub Icon from FontAwesome */}
                                             <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                                             <span>{repo.label}</span>
                                         </a>
@@ -204,12 +195,10 @@ const ProjectDetail = () => {
                 to="/Projects"
                 className="fixed bottom-4 right-4 flex items-center space-x-2 px-3 py-2 rounded-lg border border-white bg-black text-white font-bold italic hover:bg-blue-500 transition-colors duration-300 cursor-pointer"
             >
-                {/* Icon B */}
                 <div className="w-6 h-6 flex items-center justify-center bg-black text-white rounded-full border border-white font-bold">
                     B
                 </div>
 
-                {/* Teks */}
                 <span className="italic">Back</span>
             </Link>
         </div>

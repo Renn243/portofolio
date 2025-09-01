@@ -7,18 +7,16 @@ const Projects = () => {
     return (
         <div className="relative min-h-screen py-12 px-4 bg-blue-50 overflow-hidden">
             <div className="relative max-w-4xl mx-auto z-10">
-                {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-blue-500 mb-4">
+                    <h1 className="text-4xl lg:text-5xl font-bold text-blue-500 mb-4">
                         MY PROJECTS
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    <p className="lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                         A collection of projects I have worked on
                     </p>
                     <div className="mt-10 w-32 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mb-12"></div>
                 </div>
 
-                {/* Projects List */}
                 <div className="space-y-8">
                     {projectsData.map((project, index) => (
                         <div
@@ -26,11 +24,11 @@ const Projects = () => {
                             className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 transform"
                         >
                             <div className="md:flex">
-                                <div className="h-100 w-80 relative overflow-hidden">
+                                <div className="lg:h-100 w-80 relative overflow-hidden">
                                     <img
                                         src={project.images[0]}
                                         alt={project.title}
-                                        className="w-full h-64 md:h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        className="w-full h-64 lg:h-full object-cover transition-transform duration-500 hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
@@ -84,7 +82,6 @@ const Projects = () => {
                 </div>
             </div>
 
-            {/* Wave Background Fixed */}
             <div className="fixed bottom-0 left-0 w-full pointer-events-none z-0">
                 <svg
                     className="w-full h-60"
@@ -101,14 +98,12 @@ const Projects = () => {
 
             <Link
                 to="/"
-                className="fixed bottom-4 right-4 flex items-center space-x-2 px-3 py-2 rounded-lg border border-white bg-black text-white font-bold italic hover:bg-blue-500 transition-colors duration-300 cursor-pointer"
+                className="z-10 fixed bottom-4 right-4 flex items-center space-x-2 px-3 py-2 rounded-lg border border-white bg-black text-white font-bold italic hover:bg-blue-500 transition-colors duration-300 cursor-pointer"
             >
-                {/* Icon B */}
                 <div className="w-6 h-6 flex items-center justify-center bg-black text-white rounded-full border border-white font-bold">
                     B
                 </div>
 
-                {/* Teks */}
                 <span className="italic">Back</span>
             </Link>
 
