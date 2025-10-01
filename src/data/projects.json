@@ -171,5 +171,79 @@
         ],
         "liveUrl": "https://www.aninyan.com/",
         "figma": null
+    },
+    {
+        "id": 5,
+        "title": "Anipyon",
+        "description": "Website untuk menonton anime secara online dengan fitur pencarian, filter genre, dan daftar anime populer mirip Aninyan.",
+        "longDescription": "Anipyon adalah platform streaming anime berbasis web yang dikembangkan menggunakan React.js. Website ini menyediakan berbagai fitur seperti pencarian anime, filter berdasarkan genre atau status anime, tampilan daftar anime populer, detail anime lengkap, dan streaming episode. Admin dapat mengelola konten dan update data anime melalui backend terpisah. Website ini dirancang responsif untuk desktop dan mobile, dengan antarmuka modern dan interaktif.",
+        "technologies": [
+            "React.js",
+            "Tailwind CSS",
+            "Node.js"
+        ],
+        "category": "Web Development",
+        "role": "Front End Developer",
+        "features": [
+            "Pencarian anime dengan filter genre dan status",
+            "Daftar anime populer dan ongoing",
+            "Detail anime lengkap dengan episode",
+            "Streaming episode anime",
+            "Responsive design untuk desktop dan mobile"
+        ],
+        "images": [
+            "/images/anipyon1.png",
+            "/images/anipyon2.png",
+            "/images/anipyon3.png",
+            "/images/anipyon4.png",
+            "/images/anipyon5.png",
+            "/images/anipyon6.png"
+        ],
+        "thumbnail": "thumbnail/anipyon",
+        "githubUrls": [
+            {
+                "label": "Website",
+                "url": "https://github.com/NyanNyanAnime/AninyanV2-Web.git"
+            }
+        ],
+        "liveUrl": "https://anipyon.com/",
+        "figma": null
+    },
+    {
+        "id": 6,
+        "title": "Aldi Admin",
+        "description": "Aplikasi manajemen toko perhiasan untuk mengelola user, transaksi, produk, dan voucher diskon, khusus untuk front-end admin dari aplikasi Alni Accessories.",
+        "longDescription": "Aldi Admin adalah aplikasi web yang dikembangkan untuk manajemen front-end admin dari aplikasi mobile Alni Accessories. Aplikasi ini memungkinkan admin untuk melakukan manajemen user, memonitor dan mengelola transaksi, menambahkan atau mengubah produk, serta membuat dan mengelola voucher diskon untuk pengguna aplikasi. Front-end dirancang agar responsif dan mudah digunakan oleh admin.",
+        "technologies": [
+            "React.js",
+            "Tailwind CSS",
+            "Golang",
+            "PostgreSQL"
+        ],
+        "category": "Web Development",
+        "role": "Front End Developer",
+        "features": [
+            "Manajemen user (tambah, ubah, hapus, daftar user)",
+            "Manajemen transaksi (monitor, konfirmasi, laporan)",
+            "Manajemen produk (tambah, ubah, hapus, daftar produk)",
+            "Manajemen voucher diskon (buat, ubah, hapus voucher)",
+            "Dashboard admin yang responsif dan interaktif"
+        ],
+        "images": [
+            "/images/aldiadmin1.png",
+            "/images/aldiadmin2.png",
+            "/images/aldiadmin3.png",
+            "/images/aldiadmin4.png",
+            "/images/aldiadmin4.png"
+        ],
+        "thumbnail": "thumbnail/aldiadmin",
+        "githubUrls": [
+            {
+                "label": "Website",
+                "url": "https://github.com/Renn243/alni-dashboard.git"
+            }
+        ],
+        "liveUrl": null,
+        "figma": "https://www.figma.com/design/MV6TdC5c0225HfyOSaFjka/Untitled?node-id=0-1&p=f&t=pK1FOOv2PJwDbMjz-0"
     }
 ]

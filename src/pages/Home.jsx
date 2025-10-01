@@ -27,9 +27,13 @@ const Home = () => {
 
     useEffect(() => {
         const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+
         window.addEventListener("resize", handleResize);
+        handleResize();
+
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
 
     useEffect(() => {
         if (!isDesktop) return;
@@ -138,7 +142,7 @@ const Home = () => {
             </section>
 
             {/* About */}
-            <section className="mt-100 lg:mt-10 h-screen flex items-center">
+            <section className="mt-150 mb-75 lg:mt-10 lg:mb-10 h-screen flex items-center">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -183,7 +187,7 @@ const Home = () => {
 
 
             {/* Skills */}
-            <d className="mt-10 min-h-screen flex items-center bg-[#c0d5e8]">
+            <d className="pt-10 pb-10 min-h-screen flex items-center bg-[#c0d5e8]">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-blue-400 text-sm tracking-[0.5em] mb-6 font-light">
@@ -235,22 +239,20 @@ const Home = () => {
             {/* Projects */}
             <section
                 ref={projectsRef}
-                className="relative transition-all duration-500 ease-in-out"
+                className="py-10 lg:py-5 relative transition-all duration-500 ease-in-out"
                 style={{
-                    height: `${(5) * 100}vh`,
-                    backgroundColor: bgColor
+                    height: isDesktop ? `${5 * 100}vh` : "auto",
+                    backgroundColor: bgColor,
                 }}
             >
-                <div className="sticky top-0 h-screen overflow-hidden">
+                <div className={isDesktop ? "sticky top-0 h-screen overflow-hidden" : ""}>
                     <div className="h-full flex items-center">
                         <div
                             ref={horizontalRef}
-                            className="flex flex-col lg:flex-row lg:overflow-x-hidden"
-                            style={{ width: '100%' }}
+                            className={`flex ${isDesktop ? "lg:flex-row lg:overflow-x-hidden" : "flex-col"}`}
+                            style={{ width: "100%" }}
                         >
-
-                            {/* Header Project */}
-                            <div className="min-w-screen flex-shrink-0 flex items-center justify-center px-6">
+                            <div className={`min-w-screen flex-shrink-0 flex items-center justify-center px-6 ${isDesktop ? "" : "w-full"}`}>
                                 <div className="text-center">
                                     <h2 className="text-white text-sm tracking-[0.5em] mb-6 font-light">
                                         some projects that I have worked on
@@ -265,13 +267,11 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            {/* Projects */}
                             {projectsData.slice(0, 3).map((project, index) => (
                                 <div
                                     key={project.id}
-                                    className="flex items-center px-4 sm:px-6 lg:px-12 lg:min-w-screen lg:flex-shrink-0"
+                                    className={`mt-10 lg:mt-5 flex items-center px-6 lg:px-12 ${isDesktop ? "lg:min-w-screen lg:flex-shrink-0" : "w-full flex-col"}`}
                                 >
-
                                     <div className="container mx-auto">
                                         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
                                             <div>
@@ -307,7 +307,7 @@ const Home = () => {
                                                     <img
                                                         src={project.images[0]}
                                                         alt={project.title}
-                                                        className="h-50 w-50 lg:w-full lg:h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                                                        className="lg:w-full lg:h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                                                     />
                                                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                                                 </div>
@@ -317,7 +317,7 @@ const Home = () => {
                                 </div>
                             ))}
 
-                            <div className="flex items-center justify-center px-4 sm:px-6 lg:px-6 lg:min-w-screen lg:flex-shrink-0">
+                            <div className={`mt-20 lg:mt-5 flex items-center justify-center px-6 ${isDesktop ? "lg:px-6 lg:min-w-screen lg:flex-shrink-0" : "w-full mt-10"}`}>
                                 <div className="text-center">
                                     <h2 className="text-4xl lg:text-5xl font-extralight text-white mb-10">
                                         Want to see more?
@@ -332,14 +332,13 @@ const Home = () => {
                                     </Link>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Contact */}
-            <section className="my-50 lg:my-10 h-screen flex items-center relative">
+            <section className="my-75 lg:my-10 h-screen flex items-center relative">
                 <div className="z-10 container mx-auto px-6 text-center">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-blue-400 text-sm tracking-[0.5em] mb-6 font-light">CONTACT</div>
