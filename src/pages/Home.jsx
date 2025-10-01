@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import bgVideo from "../assets/persona3reload.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope as faEnvelopeSolid } from "@fortawesome/free-solid-svg-icons";
@@ -27,6 +27,10 @@ const Home = () => {
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
         const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
 
         window.addEventListener("resize", handleResize);
@@ -52,11 +56,15 @@ const Home = () => {
                 const maxScroll = container.scrollWidth - container.clientWidth;
                 container.scrollLeft = progress * maxScroll;
 
-                const totalSlides = 1 + projectsData.length + 1;
-                const slideProgress = progress * (totalSlides - 1);
-                const newSlide = Math.floor(slideProgress);
+                const projectCount = projectsData.length;
+                const slideHeight = rect.height / projectCount;
+                const scrollOffset = Math.abs(rect.top);
+                const newSlide = Math.min(
+                    projectCount - 1,
+                    Math.floor(scrollOffset / slideHeight)
+                );
 
-                if (newSlide !== currentSlide && newSlide >= 0 && newSlide < totalSlides) {
+                if (newSlide !== currentSlide) {
                     setCurrentSlide(newSlide);
                     setBgColor(backgroundColors[newSlide]);
                 }
@@ -68,6 +76,7 @@ const Home = () => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, [currentSlide, isDesktop, projectsData.length, backgroundColors]);
+
 
     return (
         <div className="">

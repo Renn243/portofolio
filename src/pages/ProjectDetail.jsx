@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
@@ -11,6 +11,10 @@ const ProjectDetail = () => {
     const [showImageModal, setShowImageModal] = useState(false);
 
     const project = projectsData.find((p) => p.id === parseInt(id));
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     if (!project) {
         return (
@@ -174,12 +178,15 @@ const ProjectDetail = () => {
 
             {/* Image Modal */}
             {showImageModal && (
-                <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={() => setShowImageModal(false)}>
-                    <div className="relative max-w-6xl max-h-full">
+                <div
+                    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+                    onClick={() => setShowImageModal(false)}
+                >
+                    <div className="relative max-w-full max-h-full overflow-auto">
                         <img
                             src={project.images[selectedImage]}
                             alt={`${project.title} - Full Size`}
-                            className="max-w-full max-h-full object-contain"
+                            className="w-auto h-auto max-w-none max-h-none object-contain"
                         />
                         <button
                             onClick={() => setShowImageModal(false)}

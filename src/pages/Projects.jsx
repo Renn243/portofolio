@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import { useEffect } from 'react';
 import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="relative min-h-screen py-12 px-4 bg-blue-50 overflow-hidden">
