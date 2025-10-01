@@ -5,6 +5,7 @@ import { faEnvelope as faEnvelopeSolid } from "@fortawesome/free-solid-svg-icons
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { I1, I2, I3, I4, I5, I6, I7, I8, I9 } from '../assets/icons'
 import Char from '../assets/character.jpg'
+import Photo from '../assets/profile.png'
 import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
 
@@ -175,7 +176,7 @@ const Home = () => {
 
                         <div className="relative w-full h-96 flex items-center justify-center mb-100 lg:mb-0">
                             <img
-                                src={Char}
+                                src={Photo}
                                 alt="character"
                                 className="w-75 lg:w-100 rounded-lg"
                             />
